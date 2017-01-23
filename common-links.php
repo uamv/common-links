@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name: Common Links
- * Plugin URI: http://typewheel.xyz/plugin/common-links
+ * Plugin URI: http://typewheel.xyz/wp
  * Description: Adds custom links to the link query
- * Version: 0.2
+ * Version: 1.0
  * Author: UaMV
  * Author URI: http://vandercar.net
  *
@@ -17,18 +17,17 @@
  * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
  * @package Common Links
- * @version 0.2
+ * @version 1.0
  * @author UaMV
  * @copyright Copyright (c) 2016, UaMV
- * @link http://typewheel.xyz/plugin/common-links
+ * @link http://typewheel.xyz/wp
  * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
 
 // Define plugins globals.
-define( 'CL_VERSION', '0.2' );
-define( 'CL_DIR_PATH', plugin_dir_path( __FILE__ ) );
-define( 'CL_DIR_URL', plugin_dir_url( __FILE__ ) );
+define( 'COMMON_LINKS_VERSION', '1.0' );
+define( 'COMMON_LINKS_DIR_URL', plugin_dir_url( __FILE__ ) );
 
 // Get instance of class if in admin.
 global $pagenow;
@@ -58,7 +57,7 @@ class Common_Links {
 	 *
 	 * @var     string
 	 */
-	protected $version = CL_VERSION;
+	protected $version = COMMON_LINKS_VERSION;
 
 	/**
 	 * Instance of this class.
@@ -135,7 +134,7 @@ class Common_Links {
 	 */
 	public function add_stylesheet() {
 
-		wp_enqueue_style( 'common-links', CL_DIR_URL . 'common-links.css', array(), CL_VERSION );
+		wp_enqueue_style( 'common-links', COMMON_LINKS_DIR_URL . 'common-links.css', array(), COMMON_LINKS_VERSION );
 
 	} // end add_stylesheet
 
@@ -216,7 +215,7 @@ class Common_Links {
 	/**
 	 * Adds URL field
 	 *
-	 * @since    1.0.0
+	 * @since    1.0
 	 */
 	public function add_url_field() {
 
@@ -237,7 +236,7 @@ class Common_Links {
 	/**
 	 * Saves URL field to database
 	 *
-	 * @since    1.0.0
+	 * @since    1.0
 	 */
 	public function save_url( $post_id ) {
 
@@ -261,7 +260,7 @@ class Common_Links {
 	/**
 	 * Contral available admin columns
 	 *
-	 * @since    1.0.0
+	 * @since    1.0
 	 */
 	public function modify_admin_columns( $columns ) {
 
@@ -277,7 +276,7 @@ class Common_Links {
 	/**
 	 * Add custom column for URLs
 	 *
-	 * @since    1.0.0
+	 * @since    1.0
 	 */
 	public function custom_admin_column( $column, $post_id ) {
 
@@ -290,7 +289,7 @@ class Common_Links {
 	/**
 	 * Add common links to link query
 	 *
-	 * @since    1.0.0
+	 * @since    1.0
 	 */
 	public function append_common_links( $results, $query ) {
 
