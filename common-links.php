@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Common Links
  * Plugin URI: http://typewheel.xyz/wp
- * Description: Adds custom links to the link query
- * Version: 1.0
+ * Description: Adds custom links to the editor's link query
+ * Version: 1.1
  * Author: UaMV
  * Author URI: http://vandercar.net
  *
@@ -17,7 +17,7 @@
  * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
  * @package Common Links
- * @version 1.0
+ * @version 1.1
  * @author UaMV
  * @copyright Copyright (c) 2016, UaMV
  * @link http://typewheel.xyz/wp
@@ -26,7 +26,7 @@
 
 
 // Define plugins globals.
-define( 'COMMON_LINKS_VERSION', '1.0' );
+define( 'COMMON_LINKS_VERSION', '1.1' );
 define( 'COMMON_LINKS_DIR_URL', plugin_dir_url( __FILE__ ) );
 
 // Get instance of class if in admin.
